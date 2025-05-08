@@ -41,7 +41,18 @@ class list {
         node *previous = START;
         node *current = START;
 
-       
+        while ((current != NULL) && (nim >= current->noMhs))
+        {
+            if (nim == current->noMhs)
+            {
+                cout << "\nduplikasi noMhs tidak diijinkan\n";
+                return;
+            }
+            previous = current;
+            current = current->next;
+        }
+
+        
     }
 
     
