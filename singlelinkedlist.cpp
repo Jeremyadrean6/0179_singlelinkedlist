@@ -64,7 +64,8 @@ class list {
     bool search(int nim, node **previous, node **current)
     {
         *previous = START;
-        current = START;
+        *current = START;
+         
 
         while ((*current != NULL) && (nim != (*current)->noMhs))
         {
@@ -72,7 +73,27 @@ class list {
             *current = (*current)->next;
         }
 
-        retrun (*curent != NULL);
+        return (*current != NULL);
     }
+
+    bool delnode(int nim)
+    {
+        node *current, *previous;
+        if (!search(nim, &previous, &current))
+        return false;
+
+        if (current == START)
+        START = START->next;
+
+        else 
+        previous->next = current->next;
+
+        delete current;
+        return true;
+    }
+
+    
 }
+
+
 
