@@ -60,5 +60,13 @@ class list {
     {
         return (START == NULL);
     }
+
+    bool search(int nim, node **previous, node **current)
+    {
+        *previous = START;
+        current = START;
+
+        
+    }
 }
 
