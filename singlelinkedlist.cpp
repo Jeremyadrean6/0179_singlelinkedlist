@@ -52,7 +52,8 @@ class list {
             current = current->next;
         }
 
-        
+        nodebaru->next = current;
+        previous->next = nodebaru;
     }
 
     
