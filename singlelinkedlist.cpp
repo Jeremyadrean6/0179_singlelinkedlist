@@ -38,6 +38,9 @@ class list {
             return;
         }
 
+        node *previous = START;
+        node *current = START;
+
        
     }
 
