@@ -130,7 +130,15 @@ int main()
         cout << endl;
              << "masukan pilihan (1-5): ";
         cin >> ch;  
- 
+        switch (ch)
+        {
+            case '1' :
+            {
+                mhs.addnode();
+            }
+            break;
+
+           
     }
 
 }
