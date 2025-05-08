@@ -56,6 +56,9 @@ class list {
         previous->next = nodebaru;
     }
 
-    
+    bool listempty()
+    {
+        return (START == NULL);
+    }
 }
 
