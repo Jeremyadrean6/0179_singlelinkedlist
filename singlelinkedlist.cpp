@@ -8,11 +8,11 @@ class node {
     node *next;
 };
 
-class list {
+class singlelinkedlist {
     node *START;
 
     public :
-    list()
+    singlelinkedlist()
     {
         START = NULL;
     }
@@ -127,7 +127,7 @@ int main()
         cout << "3. menampilkan semua data didalam list"<< endl;
         cout << "4. mencari data dalam list"<< endl;
         cout << "5. keluar"<< endl;
-        cout << endl;
+        cout << endl
              << "masukan pilihan (1-5): ";
         cin >> ch;  
         switch (ch)
@@ -150,13 +150,11 @@ int main()
                      << "\nmasukan no mahasiswa yang akan dihapus : ";
                 cin >> nim;
                 if (mhs.delnode(nim) == false)
-                cout << endl;
-                     << "data tidak ditemukan" << endl;
-            else
                 cout << endl
-                     << "data mahasiswa dengan nomor mahasiswa" << nim << "berhasil dihapus" endl;
-
-
+                     << "data tidak ditemukan" << endl;
+                else
+                cout << endl
+                     << "data mahasiswa dengan nomor mahasiswa" << nim << "berhasil dihapus"  << endl;
             }
             break;
             case '3':
@@ -166,16 +164,16 @@ int main()
             break;
             case '4':
             {
-                if(mhs.listEmpty() == true)
+                if(mhs.listempty() == true)
                 {
                     cout << "\nList kosong\n";
                     break;
                 }
-                Node *previous, *current;
+                node *previous, *current;
                 cout << endl
                      << "Masukkan no mahasiswa yang dicari : ";
                 cin >> nim;
-                if (mhs.Search(nim, &previous, &current) == false)
+                if (mhs.search(nim, &previous, &current) == false)
                     cout << endl
                          << "Data tidak ditemukan" << endl;
                 else
@@ -198,9 +196,7 @@ int main()
             }
             break;
             }
-    
         }
-    
     }
 
 
