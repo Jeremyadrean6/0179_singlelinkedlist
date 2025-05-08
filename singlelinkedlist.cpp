@@ -92,8 +92,26 @@ class list {
         return true;
     }
 
-    
-}
+    void traverse()
+    {
+        if (listempty())
+        {
+            cout << "\nlist kosong\n";
+        }
+        else
+        {
+            cout <<"\ndata didalam list adalah:\n";
+            node *currentnode = START;
+            while (currentnode != NULL)
+            {
+                cout << currentnode->noMhs << endl;
+                currentnode = currentnode->next;
+            }
+            cout << endl;
+        }
+    }
+};
+
 
 
 
